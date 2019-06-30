@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<div class="container " style="background: rgb(125, 194, 250);border-radius: 3px;">
+    <div class="row justify-content-center mt-5 p-2">
+        <div class="col-sm-12 text-center">
+            <h2>Add Product to Inventory</h2>
+        </div>
+        <div class="col-sm-6 ">
+            <div class="card ">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="name">Item Name</label>
+                            <input type="text"
+                            class="form-control" name="name" id="name" aria-describedby="helpName" placeholder="eg : Bournivita 1 kg bottle" required>
+                            <small id="helpName" class="form-text text-muted">Please enter a product name</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Item Price</label>
+                            <input type="number"
+                            class="form-control" name="price" id="price" aria-describedby="helpPrice" placeholder="eg : 403.00" `required>
+                            <small id="helpPrice" class="form-text text-muted">Please enter a product price</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="qty">Item Quantity</label>
+                            <input type="number"
+                            class="form-control" name="qty" id="qty" aria-describedby="helpQty" placeholder="eg: 30" `required>
+                            <small id="helpQty" class="form-text text-muted">Please enter a product Quantity</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Item</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
